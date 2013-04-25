@@ -27,41 +27,37 @@ void draw() {
 
   int step = 1;
   
-  float sz=1.0f+12.0f*sin((float)frameCount/3.0f);
+  float fsize = (1.0f+12.0f*sin((float)frameCount/3.0f));
+  int sz= (int) fsize;
+  int radius = (int)(fsize/2.0f);
   fill(0,255,0);
   
   if(sz<1.0f)
   {
-   lastx=x1;
-  lasty=y1; 
+     lastx=x1;
+     lasty=y1; 
   }
   else
   {
   
-  for(int i=0;i <= (int)sz;i++)
-  {
-    for(int j=0;j <= (int)sz;j++)
-     {
-        int xoff=i-(int)sz/2;
-        int yoff=j-(int)sz/2;
-        
-        if(sqrt(xoff*xoff+yoff*yoff)<sqrt(sz))
-        {
-       
-        int x = lastx + xoff;
-        int y = lasty + yoff;
-        
-        rect(x,y,1,1);
-        }
-     }
+    for(int i=0;i <= sz;i++)
+    {
+      for(int j=0;j <= sz;j++)
+      {
+          int dx=i-radius;
+          int dy=j-radius;
+          
+          if(sqrt(dx*dx+dy*dy)<sqrt( radius*radius ))
+          {
+         
+          int x = lastx + dx;
+          int y = lasty + dy;
+          
+          rect(x,y,1,1);
+          }
+       }
+    }
   }
-  }
-  
-  //ellipse(x1,y1,2*sz,2*sz);
-  //rect(x1,y1,1,5);
-
- 
-  
   aec.endDraw();
   aec.drawSides();
 }
