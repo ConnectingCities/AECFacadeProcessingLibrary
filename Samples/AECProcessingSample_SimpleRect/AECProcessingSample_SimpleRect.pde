@@ -16,7 +16,10 @@ void draw() {
   
   fill(255,0,100);
   
-  rect(mouseX/aec.getScaleX(),mouseY/aec.getScaleY(),3,4);
+  //rect(mouseX/aec.getScaleX(),mouseY/aec.getScaleY(),3,4);
+
+  textSize(6);
+  text("word", mouseX/aec.getScaleX(), mouseY/aec.getScaleY()); 
 
   aec.endDraw();
   aec.drawSides();
