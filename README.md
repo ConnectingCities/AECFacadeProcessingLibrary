@@ -40,18 +40,22 @@ Samples Description
 There are 3 sample sketches of varying complexity included in the Samples folder.
 
 
-1) AECProcessingSample_SimpleRect
+### AECProcessingSample_SimpleRect
 
 The most minimal example. The coordinates of your mouse cursor on the Processing canvas are converted to
 Facade coordinates and a rectangle is drawn on the corresponding location.
 
 
-2) AECProcessingSample_Columns
+### AECProcessingSample_Columns
 
 Two coloured columns, one time-based, the other based on the mouse coordinate.
 
 
-3) AECProcessingSample_MousePulse
+### AECProcessingSample_MousePulse
 
 A time-based pulse that appears in regular intervals at the the mouse cursor's position.
 
+
+### AECProcessingSample_Text
+
+A simple example of a marquee scrolling across the main part of the AEC facade. It is written in a way that should make it easy to take and add it to other code. It is not recommended to vary font sizes or typefaces, but to use the existing font settings, which have been optimized for the particular facade raster.
