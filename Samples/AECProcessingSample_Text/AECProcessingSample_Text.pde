@@ -8,16 +8,19 @@ float FONT_OFFSET_Y = 0.12;
 float FONT_SCALE_X = 2.669;
 float FONT_SCALE_Y = 2.67;
 
-String string = "hello WORLD";
+String stringWithSpecialCharacters = "Hello ĞİŞğşı üöäß";
 
 void setup() {
   frameRate(25);
   size(1200, 400);
   
-  // NOTE: This font needs to be in the data folder. It's actually called "Proggy Square (Slashed Zero)", 
-  // and it's available for free at http://www.proggyfonts.com
+  // NOTE: This font needs to be in the data folder.
+  // and it's available for free at http://www.dafont.com
   // You COULD use a different font, but you'd have to tune the above parameters. Monospaced bitmap fonts work best.
-  font1 = createFont("facade.ttf", 9, false);
+  font1 = createFont("FreePixel.ttf", 9, false);
+  
+ // font1 = createFont("CourierNewPSMT", 9, false, charactersToInclude);
+ // font1 = loadFont("CourierNewPS-BoldMT-20.vlw");
   
   aec = new AEC();
   aec.init();
@@ -35,11 +38,11 @@ void draw() {
   fill(255,0,100);
   
   // determines the speed (number of frames between text movements)
-  int frameInterval = 4;
+  int frameInterval = 3;
   
   // min and max grid positions at which the text origin should be. we scroll from max (+40) to min (-80)
-  int minPos = -80;
-  int maxPos = 40;
+  int minPos = -150;
+  int maxPos = 50;
   int loopFrames = (maxPos-minPos) * frameInterval;
   
   // vertical grid pos
@@ -63,9 +66,9 @@ void displayText(int x, int y)
   textSize(FONT_SIZE);
   
   // draw the font glyph by glyph, because the default kerning doesn't align with our grid
-  for(int i = 0; i < string.length(); i++)
+  for(int i = 0; i < stringWithSpecialCharacters.length(); i++)
   {
-    text(string.charAt(i), (float)i*3, 0);
+    text(stringWithSpecialCharacters.charAt(i), (float)i*3, 0);
   }
   
   popMatrix();
