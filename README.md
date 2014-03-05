@@ -7,11 +7,26 @@ The library, called AECPlugin, allows you to use standard Processing draw comman
 on the Ars Electronica Center media facade. It creates all the necessary data packages and sends them
 to a given destination IP/port, where the AEC Facade Simulator and Control software is running.
 
+License
+==========================
+Copyright (C) 2013  Ars Electronica Futurelab
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+See LICENSE.md for details.
 
 Installation
 ==========================
 
-1)
+### Plugin Installation
 
 Put the "AECPlugin" folder into you "libraries" subfolder in your Processing Sketchbooks folder.
 (You can view and change this folder by selecting File > Preferences in Processing.)
@@ -21,7 +36,7 @@ Further instructions can be found here:
 http://wiki.processing.org/w/How_to_Install_a_Contributed_Library
 
 
-2)
+### Configuration
 
 If you are running the AEC Facade Simulator and Control application on the same machine as the
 processing sketch, simply start the Simulator, open one of the supplied Processing samples,
